@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Grid from '@mui/material/Grid';
 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -74,18 +73,14 @@ function Profile() {
 
        <h1 >User Profile Lists</h1>
       {profileList.map((rawimg) => (
-       <Grid container>
-         <Grid item  md={3}>
+    
          <div className="column">
           <img src={rawimg.picture} alt="text" onClick={() => handleClick(rawimg.id)}></img>
           <div>Title: {rawimg.title}</div>
           <div>First Name: {rawimg.firstName}</div>
           <div>Last Name: {rawimg.lastName}</div>
           <div>Email: {rawimg.email}</div>
-        </div>
-         </Grid>
-       </Grid>
-       
+        </div>   
     
       ))}
 
